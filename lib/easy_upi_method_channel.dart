@@ -13,12 +13,6 @@ class MethodChannelEasyUpi extends EasyUpiPlatform {
   final methodChannel = const MethodChannel('easy_upi');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
-  }
-
-  @override
   Future<List<UpiApp>> getAllUpiApps({required String upiUri}) async {
     final List<Map<dynamic, dynamic>>? apps =
         await methodChannel.invokeListMethod<Map<dynamic, dynamic>>('getAllUpiApps', {'upiUri': upiUri});

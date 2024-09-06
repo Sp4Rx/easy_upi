@@ -8,16 +8,11 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockEasyUpiPlatform with MockPlatformInterfaceMixin implements EasyUpiPlatform {
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
-
-  @override
   Future<List<UpiApp>> getAllUpiApps({required String upiUri}) => Future.value([]);
 
   @override
   Future<UpiResponse> startTransaction({required UpiApp app}) => Future.value(UpiResponse('failure'));
 }
-
-class UpiPayment {}
 
 void main() {
   final EasyUpiPlatform initialPlatform = EasyUpiPlatform.instance;
@@ -26,11 +21,11 @@ void main() {
     expect(initialPlatform, isInstanceOf<MethodChannelEasyUpi>());
   });
 
-  test('getPlatformVersion', () async {
+  test('getAllUpiApps', () async {
     EasyUpi easyUpiPlugin = EasyUpi();
     MockEasyUpiPlatform fakePlatform = MockEasyUpiPlatform();
     EasyUpiPlatform.instance = fakePlatform;
 
-    expect(await easyUpiPlugin.getPlatformVersion(), '42');
+    expect(await easyUpiPlugin.getAllUpiApps(upiUri: 'upi://pay'), []);
   });
 }

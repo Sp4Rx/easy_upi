@@ -25,10 +25,6 @@ abstract class EasyUpiPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
-  }
-
   Future<List<UpiApp>> getAllUpiApps({required String upiUri}) {
     throw UnimplementedError('getAllUpiApps() has not been implemented.');
   }
