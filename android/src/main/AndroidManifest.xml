@@ -1,3 +1,52 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="io.sp4rx.upi.easy.easy_upi">
+
+  <queries>
+    <intent>
+      <action android:name="android.intent.action.VIEW" />
+      <data android:scheme="upi" />
+    </intent>
+  </queries>
+  <queries>
+    <package android:name="in.amazon.mShop.android.shopping" />
+    <package android:name="org.altruist.BajajExperia" />
+    <package android:name="com.bajajfinservmarkets" />
+    <package android:name="com.dreamplug.androidapp" />
+    <package android:name="com.myfave.android" />
+    <package android:name="com.flipkart.android" />
+    <package android:name="com.goibibo" />
+    <package android:name="com.google.android.apps.nbu.paisa.user" />
+    <package android:name="com.nextbillion.groww" />
+    <package android:name="com.jupiter.money" />
+    <package android:name="in.gokiwi.kiwitpap" />
+    <package android:name="com.makemytrip" />
+    <package android:name="com.mobikwik_new" />
+    <package android:name="com.navi.navi" />
+    <package android:name="com.niyo.app" />
+    <package android:name="com.phonepe.app" />
+    <package android:name="com.samsung.android.spay" />
+    <package android:name="com.shriramfinance.shriramone" />
+    <package android:name="com.slice" />
+    <package android:name="com.tatadigital.tcp" />
+    <package android:name="com.timepayonline" />
+    <package android:name="com.ultracash.payment" />
+    <package android:name="com.whatsapp" />
+    <package android:name="com.adityabirlacapital.abcmoney" />
+    <package android:name="net.one97.paytm" />
+    <package android:name="com.famapp" />
+    <package android:name="com.popclub.app" />
+    <package android:name="com.freo.app" />
+    <package android:name="com.supermoney" />
+    <package android:name="com.salaryse" />
+    <package android:name="com.bharatpe.customer" />
+    <package android:name="com.kreditbee.android" />
+    <!-- Additional common UPI apps -->
+    <package android:name="in.org.npci.upiapp" />
+    <package android:name="com.axisbank.upi" />
+    <package android:name="com.sbi.upi" />
+    <package android:name="com.csam.icici.bank.imobile" />
+    <package android:name="com.bankofbaroda.upi" />
+    <package android:name="com.freecharge.android" />
+  </queries>
+
 </manifest>
