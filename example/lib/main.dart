@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
         _upiApps = apps;
       });
     } catch (e) {
-      print('Error loading UPI apps: $e');
+      debugPrint('Error loading UPI apps: $e');
     }
   }
 
@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _showError(String message) {
-    print(message);
+    debugPrint(message);
   }
 
   @override
