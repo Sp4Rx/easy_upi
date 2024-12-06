@@ -1,0 +1,24 @@
+name: Test Comment on PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  test-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Comment on PR
+        uses: unsplash/comment-on-pr@v1.3.0
+        with:
+          message: |
+            Hello! 👋
+            This is a test comment added by the `comment-on-pr` action.
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
